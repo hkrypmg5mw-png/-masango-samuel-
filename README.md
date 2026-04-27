@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Masango Samuel
 
-💻 Junior Software Developer  
+💻 Software Developer  
 📍 Cameroon  
 
 ---
