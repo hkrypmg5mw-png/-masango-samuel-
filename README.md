@@ -73,3 +73,33 @@ I enjoy solving problems through software and continuously improving my skills.
 ---
 
 ⭐ *Open to internships, junior roles, and freelance work*
+
+## 🚀 How to Launch the System
+
+### Backend (Django)
+1. **Docker (Recommended)**:
+   ```bash
+   docker-compose up --build
+   ```
+2. **Manual**:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   python manage.py migrate
+   python manage.py runserver
+   ```
+
+### Frontend (Flutter)
+1. Install Flutter SDK.
+2. Run the app:
+   ```bash
+   cd frontend
+   flutter pub get
+   flutter run
+   ```
+
+### Features
+- **Bilingual Support**: Toggle between English and French in settings.
+- **Offline Sync**: Data is cached locally and synced automatically when online.
+- **AI Risk Prediction**: Real-time pregnancy risk scores based on patient data.
+- **Emergency SOS**: Immediate alerting of health workers and facilities.
