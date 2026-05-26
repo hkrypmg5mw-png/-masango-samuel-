@@ -1,0 +1,13 @@
+{
+  "appTitle": "MCH Follow-Up",
+  "login": "Login",
+  "register": "Register",
+  "username": "Username",
+  "password": "Password",
+  "language": "Language",
+  "dashboard": "Dashboard",
+  "pregnancyTracker": "Pregnancy Tracker",
+  "vaccinations": "Vaccinations",
+  "appointments": "Appointments",
+  "emergencySos": "EMERGENCY SOS"
+}
