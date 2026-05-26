@@ -1,0 +1,17 @@
+Creating test database for alias 'default'...
+../home/jules/.pyenv/versions/3.12.13/lib/python3.12/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+/home/jules/.pyenv/versions/3.12.13/lib/python3.12/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+./home/jules/.pyenv/versions/3.12.13/lib/python3.12/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+/home/jules/.pyenv/versions/3.12.13/lib/python3.12/site-packages/sklearn/utils/validation.py:2691: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+.
+----------------------------------------------------------------------
+Ran 4 tests in 0.119s
+
+OK
+Destroying test database for alias 'default'...
+Found 4 test(s).
+System check identified no issues (0 silenced).

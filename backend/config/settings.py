@@ -4,7 +4,7 @@ from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-mch-system-secret-key-cameroon'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-mch-system-secret-key-cameroon')
 
 DEBUG = True
 

@@ -8,13 +8,18 @@ def smart_merge(local_data, server_instance):
     """
     updated_fields = []
     for field, value in local_data.items():
-        # Simple logic: if server field is null or empty, and local has data, update it.
-        # If both have data, we could use a timestamp-based approach if available.
-        current_server_value = getattr(server_instance, field, None)
-        if value and value != current_server_value:
-            setattr(server_instance, field, value)
-            updated_fields.append(field)
+        if field in ['id', 'user', 'last_synced_at']:
+            continue
+
+        if hasattr(server_instance, field):
+            current_server_value = getattr(server_instance, field, None)
+            # If local value is different and not null/empty, update server.
+            if value is not None and value != "" and value != current_server_value:
+                setattr(server_instance, field, value)
+                updated_fields.append(field)
 
     if updated_fields:
+        if hasattr(server_instance, 'last_synced_at'):
+            server_instance.last_synced_at = timezone.now()
         server_instance.save()
     return server_instance, updated_fields

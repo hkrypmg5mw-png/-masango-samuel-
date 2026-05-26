@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../providers/auth_provider.dart';
 import 'mother_dashboard.dart';
 import 'health_worker_dashboard.dart';
+import 'admin_dashboard.dart';
 
 class LoginScreen extends StatelessWidget {
   final Function(bool) onLanguageToggle;
@@ -49,8 +50,16 @@ class LoginScreen extends StatelessWidget {
                     .login(_usernameController.text, _passwordController.text);
                 if (success) {
                    String role = Provider.of<AuthProvider>(context, listen: false).role ?? 'MOTHER';
+                   Widget targetDashboard;
+                   if (role == 'ADMIN') {
+                     targetDashboard = AdminDashboard();
+                   } else if (role == 'MOTHER') {
+                     targetDashboard = MotherDashboard();
+                   } else {
+                     targetDashboard = HealthWorkerDashboard();
+                   }
                    Navigator.of(context).pushReplacement(
-                     MaterialPageRoute(builder: (_) => role == 'MOTHER' ? MotherDashboard() : HealthWorkerDashboard())
+                     MaterialPageRoute(builder: (_) => targetDashboard)
                    );
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login Failed")));
