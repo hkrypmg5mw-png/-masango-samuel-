@@ -1,0 +1,1 @@
+import 'package:flutter/material.dart';\nclass DoctorDashboard extends StatelessWidget { const DoctorDashboard({super.key}); @override Widget build(BuildContext context) => const Scaffold(body: Center(child: Text('Doctor Dashboard'))); }
