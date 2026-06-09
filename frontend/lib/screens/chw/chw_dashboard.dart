@@ -1,0 +1,1 @@
+import 'package:flutter/material.dart';\nclass CHWDashboard extends StatelessWidget { const CHWDashboard({super.key}); @override Widget build(BuildContext context) => const Scaffold(body: Center(child: Text('CHW Dashboard'))); }

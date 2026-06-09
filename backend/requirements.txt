@@ -1,0 +1,13 @@
+django
+djangorestframework
+django-cors-headers
+djangorestframework-simplejwt
+django-channels
+channels-redis
+scikit-learn
+pandas
+numpy
+psycopg2-binary
+twilio
+joblib
+gunicorn
