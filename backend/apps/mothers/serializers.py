@@ -1,5 +1,6 @@
 from rest_framework import serializers, viewsets, permissions
-from .models import Mother, Pregnancy, Facility
+from .models import Mother, Pregnancy
+from apps.facilities.models import Facility
 
 class FacilitySerializer(serializers.ModelSerializer):
     class Meta:

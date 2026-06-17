@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
-from apps.mothers.models import Mother, Pregnancy, Facility
+from apps.mothers.models import Mother, Pregnancy
+from apps.facilities.models import Facility
 
 class Appointment(models.Model):
     class Type(models.TextChoices):

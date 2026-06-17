@@ -1,0 +1,23 @@
+App: apps.authentication, Label: authentication
+  Model: User
+App: apps.mothers, Label: mothers
+  Model: Mother
+  Model: Pregnancy
+App: apps.children, Label: children
+  Model: Child
+  Model: GrowthRecord
+App: apps.appointments, Label: appointments
+  Model: Appointment
+  Model: ANCVisit
+App: apps.vaccinations, Label: vaccinations
+  Model: Vaccine
+  Model: VaccinationRecord
+App: apps.notifications, Label: notifications
+  Model: Notification
+App: apps.analytics, Label: analytics
+App: apps.facilities, Label: facilities
+  Model: Facility
+App: apps.ai, Label: ai
+App: apps.chat, Label: chat
+  Model: ChatRoom
+  Model: Message

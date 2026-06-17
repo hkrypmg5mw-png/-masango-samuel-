@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from apps.children.models import Child
+from apps.facilities.models import Facility
 
 class Vaccine(models.Model):
     name = models.CharField(max_length=255)
@@ -15,7 +16,7 @@ class VaccinationRecord(models.Model):
     vaccine = models.ForeignKey(Vaccine, on_delete=models.CASCADE)
     date_administered = models.DateField()
     administered_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
-    facility = models.ForeignKey('facilities.Facility', on_delete=models.SET_NULL, null=True)
+    facility = models.ForeignKey(Facility, on_delete=models.SET_NULL, null=True)
     next_dose_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
