@@ -1,0 +1,7 @@
+SystemCheckError: System check identified some issues:
+
+ERRORS:
+vaccinations.VaccinationRecord.facility: (fields.E300) Field defines a relation with model 'facilities.Facility', which is either not installed, or is abstract.
+vaccinations.VaccinationRecord.facility: (fields.E307) The field vaccinations.VaccinationRecord.facility was declared with a lazy reference to 'facilities.facility', but app 'facilities' doesn't provide model 'facility'.
+
+System check identified 2 issues (0 silenced).
