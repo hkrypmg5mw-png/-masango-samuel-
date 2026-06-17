@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class MothersConfig(AppConfig):
-    name = "mothers"
+    name = "apps.mothers"
