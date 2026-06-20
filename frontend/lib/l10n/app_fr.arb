@@ -1,0 +1,13 @@
+{
+  "appTitle": "Suivi SMC",
+  "login": "Connexion",
+  "register": "S'inscrire",
+  "username": "Nom d'utilisateur",
+  "password": "Mot de passe",
+  "language": "Langue",
+  "dashboard": "Tableau de bord",
+  "pregnancyTracker": "Suivi de Grossesse",
+  "vaccinations": "Vaccinations",
+  "appointments": "Rendez-vous",
+  "emergencySos": "SOS URGENCE"
+}

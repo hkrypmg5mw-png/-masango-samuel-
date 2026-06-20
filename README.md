@@ -5,71 +5,87 @@
 
 ---
 
-## 🚀 About Me
-I build real-world web applications using PHP, JavaScript, and MySQL.
+# Maternal and Child Health (MCH) Follow-Up System
 
-I enjoy solving problems through software and continuously improving my skills.
+This is a comprehensive, digital healthcare solution designed specifically for the Cameroonian context. It aims to bridge the gap in postnatal care and immunization tracking, especially in environments with limited internet connectivity.
+
+## 📝 Project Description
+
+In Cameroon, weak postnatal follow-up systems lead to missed maternal and child health visits, increasing preventable morbidity and mortality. This system replaces manual, paper-based tracking with a real-time digital record system that follows a mother from her first pregnancy checkup (ANC) through the child's early years.
+
+### **Core App Features:**
+
+#### **1. Role-Based Specialized Dashboards**
+*   **Mothers:** A personal health companion to track pregnancy progress, receive automated appointment reminders, view child growth charts, and access a "one-tap" Emergency SOS button.
+*   **Health Workers (Nurses/Doctors/CHWs):** A mobile tool to manage patient records in the field, record clinic visits, and receive automated alerts for high-risk patients.
+*   **Administrators:** A system-wide view for managing health facilities, monitoring health statistics across regions, and managing user roles.
+
+#### **2. Key Intelligent Features**
+*   **AI Risk Prediction:** Uses machine learning (Random Forest) trained on synthetic Cameroonian health data to predict high-risk pregnancies and child malnutrition based on vitals like Blood Pressure, Weight, and Age.
+*   **Offline-First Architecture:** The mobile app caches all data locally using SQFlite. When a health worker travels to a remote area without a signal, they can still record data. The system uses a "Smart Merge" logic to sync everything once a connection is restored.
+*   **Real-Time Communication:** Integrated WebSocket-based chat allows mothers to consult directly with their assigned healthcare workers for non-emergencies.
+*   **Bilingual Support:** Fully localized in both **English and French**, reflecting the official languages of Cameroon.
+*   **WHO-Compliant Tracking:** Growth charts and vaccination schedules follow standard WHO guidelines (Weight-for-Age, Height-for-Age).
 
 ---
 
 ## 🛠️ Tech Stack
 
-### 💻 Languages
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+### 💻 Backend
+- **Python / Django / DRF**: Robust REST API.
+- **Django Channels**: WebSocket support for real-time chat.
+- **Scikit-learn**: Machine learning risk prediction models.
+- **PostgreSQL**: Production-grade database.
 
-### 🌐 Web
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-
-### 🗄️ Database
-![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
-
-### ⚙️ Tools
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+### 📱 Frontend
+- **Flutter / Dart**: Cross-platform mobile application.
+- **SQFlite**: Local database for offline caching.
+- **Provider**: State management.
 
 ---
 
-## 📊 GitHub Stats
+## 🚀 How to Launch the System
 
-![Samuel's GitHub stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight)
+### Backend (Django)
+1. **Docker (Recommended)**:
+   ```bash
+   docker-compose up --build
+   ```
+2. **Manual**:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   python manage.py migrate
+   python manage.py runserver
+   ```
 
----
-
-## 🔥 GitHub Streak
-
-![GitHub Streak](https://streak-stats.demolab.com/?user=YOUR_USERNAME&theme=tokyonight)
-
----
-
-## 📈 Top Languages
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight)
-
----
-
-## 📂 Featured Projects
-
-### 🏥 Doctor Appointment Booking System
-- Booking & scheduling system  
-- Admin dashboard  
-
-### 🏦 Bank Management System
-- Account & transaction management  
-
-### 🚍 Transportation System
-- Ticket booking & operations  
+### Frontend (Flutter)
+1. Install Flutter SDK.
+2. Run the app:
+   ```bash
+   cd frontend
+   flutter pub get
+   flutter run
+   ```
 
 ---
 
 ## 📫 Contact Me
-- 📧 Email: masangosamuel78@email.com  
+- 📧 Email: masangosamuel78@email.com
 - 💼 LinkedIn: https://www.linkedin.com/in/masango-samuel-5b9baa2a2?utm_source=share_via&utm_content=profile&utm_medium=member_ios
 
 ---
 
-⭐ *Open to internships, junior roles, and freelance work*
+# 🐘 Laravel Version (XAMPP Support)
+
+A parallel version of the backend has been implemented using **Laravel**, designed to work with **XAMPP/MySQL**.
+
+## Setup Laravel
+1. Go to `backend_laravel/`.
+2. Follow instructions in `README_LARAVEL.md`.
+3. The Flutter app can be configured to point to either the Django or Laravel backend by updating the `baseUrl` in service files.
+
+## Features (Laravel)
+- **Sanctum API Authentication**.
+- **Eloquent Models** for all healthcare entities.
+- **Python Bridge** for ML risk prediction.

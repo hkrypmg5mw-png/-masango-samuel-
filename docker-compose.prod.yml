@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data_prod:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=mch_prod_db
+      - POSTGRES_USER=mch_admin
+      - POSTGRES_PASSWORD=secure_prod_password
+
+  redis:
+    image: redis:7
+
+  backend:
+    build: ./backend
+    command: uvicorn config.asgi:application --host 0.0.0.0 --port 8000
+    environment:
+      - DEBUG=0
+      - SECRET_KEY=prod-secret-key-replace-me
+      - DATABASE_URL=postgres://mch_admin:secure_prod_password@db:5432/mch_prod_db
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data_prod:
