@@ -1,0 +1,38 @@
+# Django
+backend/__pycache__/
+backend/*/migrations/
+backend/db.sqlite3
+backend/local_settings.py
+*.py[cod]
+
+# Flutter
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.metadata
+frontend/.packages
+frontend/build/
+frontend/pubspec.lock
+
+# Android
+frontend/android/**/generated/
+frontend/android/app/build.gradle.kts
+frontend/android/local.properties
+frontend/android/**/build/
+
+# iOS
+frontend/ios/Flutter/Generated.xcconfig
+frontend/ios/Flutter/flutter_export_environment.sh
+frontend/ios/Pods/
+frontend/ios/.test_runtime/
+
+# Desktop
+frontend/linux/flutter/ephemeral/
+frontend/macos/Flutter/ephemeral/
+frontend/windows/flutter/ephemeral/
+
+# Misc
+.env
+.vscode/
+.idea/
+*.log
